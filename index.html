@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GroundPulse — remote property inspection you can actually check</title>
+<meta name="description" content="A verified inspector walks through your property room by room, photographs everything, and you have the report within 48 hours. No repair happens until you approve it." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Narrow:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ─────────────────────────────── hero ─────────────────────────────── -->
+<header class="top">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M2.5 12.6h4.2l2-4.1 2.4 7.2 2-3.1h8.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      <span>GroundPulse</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#roles">Who does what</a></li>
+      <li><a href="#alternatives">The alternatives</a></li>
+    </ul>
+    <a class="nav-signin" href="#start">Sign in</a>
+  </nav>
+
+  <div class="hero" id="top">
+    <div class="hero-copy">
+      <h1>Someone has to walk through your property.<br /><em>It doesn't have to be you.</em></h1>
+      <p class="lede">
+        A verified inspector visits, works through a room-by-room checklist with photos,
+        and you have the report within 48 hours — wherever you are. Nothing gets
+        repaired until you say so.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#start">Register a property</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <p class="hero-note">
+        Built for owners who live somewhere else — NRIs, rental-portfolio investors,
+        vacation-home owners.
+      </p>
+    </div>
+
+    <!-- The record: the hero is the product. Click a flagged row. -->
+    <div class="record" id="record">
+      <div class="record-head">
+        <div>
+          <p class="record-id">Inspection 0284</p>
+          <h2 class="record-addr">Flat 402, Shankar Residency<br />Baner, Pune</h2>
+        </div>
+        <p class="record-date">14 Sep 2026<br /><span>09:30–10:15</span></p>
+      </div>
+
+      <p class="record-by">
+        Inspected by R. Kulkarni
+        <span class="verified-tag">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4l3 3 6-6.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          verified inspector
+        </span>
+      </p>
+
+      <ol class="checklist">
+        <li class="room">
+          <h3>Kitchen</h3>
+          <div class="item"><span class="item-name">Sink and plumbing</span><span class="mark mark-pass">Pass</span></div>
+          <div class="item"><span class="item-name">Gas line and stove</span><span class="mark mark-pass">Pass</span></div>
+        </li>
+
+        <li class="room">
+          <h3>Bathroom</h3>
+          <button class="item item-flagged" type="button" aria-expanded="false" aria-controls="issue-1" data-issue="1">
+            <span class="item-name">Shower and washbasin drainage</span>
+            <span class="item-meta"><span class="photo-count">3 photos</span><span class="mark mark-fail">Fail</span></span>
+          </button>
+          <div class="item"><span class="item-name">Geyser</span><span class="mark mark-pass">Pass</span></div>
+        </li>
+
+        <li class="room">
+          <h3>Balcony</h3>
+          <button class="item item-flagged" type="button" aria-expanded="false" aria-controls="issue-2" data-issue="2">
+            <span class="item-name">Waterproofing and drain</span>
+            <span class="item-meta"><span class="photo-count">1 photo</span><span class="mark mark-attn">Attention</span></span>
+          </button>
+        </li>
+
+        <li class="room">
+          <h3>Main door</h3>
+          <div class="item"><span class="item-name">Lock and frame</span><span class="mark mark-pass">Pass</span></div>
+        </li>
+      </ol>
+
+      <p class="record-hint" id="record-hint">Two items were flagged. Open one to see what the inspector found.</p>
+
+      <!-- issue 1 -->
+      <div class="issue" id="issue-1" hidden>
+        <p class="issue-cat"><span class="cat-dot cat-leak"></span>Leak — flagged 14 Sep, 09:41</p>
+        <p class="issue-desc">
+          Water pooling under the washbasin. The pipe joint below the trap is seeping and
+          the cabinet base has already swollen. The trap assembly needs replacing before
+          it reaches the wall.
+        </p>
+        <div class="photos" role="group" aria-label="Photos attached by the inspector">
+          <figure class="photo photo-a"><figcaption>Basin cabinet, 09:41</figcaption></figure>
+          <figure class="photo photo-b"><figcaption>Pipe joint, 09:42</figcaption></figure>
+          <figure class="photo photo-c"><figcaption>Floor, 09:44</figcaption></figure>
+        </div>
+        <div class="decide" data-decide="1">
+          <p class="decide-q">Your decision — no work starts without it.</p>
+          <div class="decide-actions">
+            <button class="btn btn-approve" type="button" data-act="approve">Approve repair</button>
+            <button class="btn btn-decline" type="button" data-act="decline">Decline</button>
+          </div>
+        </div>
+        <div class="outcome" hidden></div>
+      </div>
+
+      <!-- issue 2 -->
+      <div class="issue" id="issue-2" hidden>
+        <p class="issue-cat"><span class="cat-dot cat-other"></span>Other — flagged 14 Sep, 10:08</p>
+        <p class="issue-desc">
+          Hairline cracks along the balcony drain lip. Nothing is leaking through yet, but
+          one monsoon will open it up. Worth sealing on the next visit rather than now.
+        </p>
+        <div class="photos" role="group" aria-label="Photos attached by the inspector">
+          <figure class="photo photo-d"><figcaption>Drain lip, 10:08</figcaption></figure>
+        </div>
+        <div class="decide" data-decide="2">
+          <p class="decide-q">Your decision — no work starts without it.</p>
+          <div class="decide-actions">
+            <button class="btn btn-approve" type="button" data-act="approve">Approve repair</button>
+            <button class="btn btn-decline" type="button" data-act="decline">Decline</button>
+          </div>
+        </div>
+        <div class="outcome" hidden></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ─────────────────────────── how it works ─────────────────────────── -->
+<section class="section" id="how">
+  <div class="section-head">
+    <h2>One inspection, start to finish</h2>
+    <p>Real timings from a quarterly inspection on a two-bedroom flat.</p>
+  </div>
+
+  <ol class="track">
+    <li>
+      <p class="track-time">Mon 08:14</p>
+      <h3>You schedule it</h3>
+      <p>Pick a date, or set it to repeat every quarter and stop thinking about it. Takes about two minutes.</p>
+    </li>
+    <li>
+      <p class="track-time">Tue 09:30</p>
+      <h3>A verified inspector arrives</h3>
+      <p>They work the checklist room by room on their phone, marking each item and photographing as they go. Their draft survives a dead signal.</p>
+    </li>
+    <li>
+      <p class="track-time">Tue 17:00</p>
+      <h3>The report reaches you</h3>
+      <p>Every room, every item, every photo, and anything flagged — with the inspector's own words. Under 48 hours from submission, measured.</p>
+    </li>
+    <li>
+      <p class="track-time">Wed 11:02</p>
+      <h3>You decide</h3>
+      <p>Approve the repair or decline it with a reason. Both are recorded. Until you choose, nothing moves and nobody is sent.</p>
+    </li>
+    <li>
+      <p class="track-time">Wed 14:40</p>
+      <h3>A verified provider takes it</h3>
+      <p>You watch the job move — requested, assigned, in progress, completed — and it closes with after-photos, not a phone call.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ───────────────────────────── the roles ─────────────────────────── -->
+<section class="section section-alt" id="roles">
+  <div class="section-head">
+    <h2>Four people touch your property. Each one is fenced in.</h2>
+    <p>
+      These limits are enforced where the data lives, not hidden in the interface.
+      Nobody sees a screen they shouldn't, because nobody can query it.
+    </p>
+  </div>
+
+  <table class="roles">
+    <caption class="sr-only">What each role can see and cannot do</caption>
+    <thead>
+      <tr><th scope="col">Role</th><th scope="col">Sees</th><th scope="col">Cannot</th></tr>
+    </thead>
+    <tbody>
+      <tr class="role-you">
+        <th scope="row">You, the owner</th>
+        <td data-label="Sees">Every property you own, every report, every flagged issue, and the full history of who did what.</td>
+        <td data-label="Cannot">Be bypassed. A repair without your approval does not exist.</td>
+      </tr>
+      <tr>
+        <th scope="row">Inspector</th>
+        <td data-label="Sees">Only the inspections assigned to them, and only for the visit window.</td>
+        <td data-label="Cannot">See your other properties, or approve anything they flag.</td>
+      </tr>
+      <tr>
+        <th scope="row">Admin</th>
+        <td data-label="Sees">Platform-wide activity, so assignments and verification never stall.</td>
+        <td data-label="Cannot">Approve a repair for you, or assign an unverified provider.</td>
+      </tr>
+      <tr>
+        <th scope="row">Service provider</th>
+        <td data-label="Sees">Only the job they accepted, with the issue photos attached to it.</td>
+        <td data-label="Cannot">Be assigned at all until an admin has verified them.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ──────────────────────────── alternatives ──────────────────────── -->
+<section class="section" id="alternatives">
+  <div class="section-head">
+    <h2>Why not just ask your cousin to check?</h2>
+    <p>Because you already tried, and here is where each of these runs out.</p>
+  </div>
+
+  <dl class="gaps">
+    <div>
+      <dt>A relative drops by</dt>
+      <dd>Kind of them. No checklist, no photos, nothing written down, and easy to forget for three months.</dd>
+    </div>
+    <div>
+      <dt>Property management software</dt>
+      <dd>Built to collect rent and log tenant tickets. It has no opinion on whether your bathroom is leaking.</dd>
+    </div>
+    <div>
+      <dt>A video call with a local agent</dt>
+      <dd>You see exactly where the camera points, nothing is timestamped, and you are trusting a narration.</dd>
+    </div>
+    <div>
+      <dt>Hiring a one-off inspector</dt>
+      <dd>One report, once. No schedule, no approval trail, and no one to actually carry out the repair afterwards.</dd>
+    </div>
+  </dl>
+</section>
+
+<!-- ────────────────────────────── the proof ───────────────────────── -->
+<section class="section section-ink" id="proof">
+  <div class="proof-lead">
+    <h2>Trust here is a constraint, not a promise</h2>
+    <p>Three things the platform will not let anyone do, including us.</p>
+  </div>
+
+  <div class="proof-items">
+    <article class="proof-item">
+      <h3>An unverified provider cannot be assigned</h3>
+      <p>
+        The assignment is refused outright unless that provider's verification flag is
+        true. Not greyed out in a dropdown — refused, with an error the admin has to read.
+      </p>
+    </article>
+    <article class="proof-item">
+      <h3>No decision can be quietly edited</h3>
+      <p>
+        Every approval, assignment and status change writes one permanent line. Those
+        lines can be read and added to. They cannot be changed or deleted by anyone.
+      </p>
+    </article>
+    <article class="proof-item">
+      <h3>48 hours is measured, not estimated</h3>
+      <p>
+        The clock starts when the inspector submits the checklist and stops when your
+        report is ready. Both timestamps are on the report.
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- ───────────────────────────── the owner ────────────────────────── -->
+<section class="section section-alt" id="voice">
+  <figure class="quote">
+    <blockquote>
+      <p>
+        My grandparents' flat sat empty for two years while I was in Dubai. I found out
+        about the seepage on a video call, six months after it started. I did not need
+        someone to reassure me — I needed to see the wall.
+      </p>
+    </blockquote>
+    <figcaption>
+      Priya, software consultant in Dubai
+      <span>Owns a two-bedroom flat in Pune, visits once a year</span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ────────────────────────────── the ask ─────────────────────────── -->
+<section class="section section-start" id="start">
+  <div class="start-inner">
+    <h2>Register the property. Schedule the first visit.</h2>
+    <p>
+      Address, type, one photo. About five minutes, and the first inspection can be on
+      the calendar before you close the tab.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#start">Get started</a>
+      <a class="btn btn-ghost" href="#record">Look at the sample report</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="#top">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M2.5 12.6h4.2l2-4.1 2.4 7.2 2-3.1h8.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        <span>GroundPulse</span>
+      </a>
+      <p>See your property's true condition, anywhere in the world, without stepping through the door.</p>
+    </div>
+    <nav class="foot-col" aria-label="Sign in">
+      <h2>Sign in</h2>
+      <ul>
+        <li><a href="#start">Owner</a></li>
+        <li><a href="#start">Inspector</a></li>
+        <li><a href="#start">Service provider</a></li>
+        <li><a href="#start">Admin</a></li>
+      </ul>
+    </nav>
+    <nav class="foot-col" aria-label="The platform">
+      <h2>Platform</h2>
+      <ul>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#roles">Roles and access</a></li>
+        <li><a href="#proof">Verification and audit</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="foot-base">
+    <p>GroundPulse, project WEB-01. Built as a full-stack platform study, not a live commercial service.</p>
+    <p><a href="https://github.com/GroundPulse-App/GroundPulse">Source on GitHub</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
