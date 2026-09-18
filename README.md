@@ -26,7 +26,7 @@ renders a real inspection record for a Pune flat. Two items are flagged; opening
 one shows the inspector's note, the attached photos and the owner's
 approve/decline decision. Approving walks the repair through the same four
 stages the product's real tracker uses (`Requested → Assigned → In progress →
-Completed`). This is Priya's journey from the BRD in [GroundPulse-App/GroundPulse](https://github.com/GroundPulse-App/GroundPulse), playable in about
+Completed`). This is Priya's journey from the BRD in [Ground-Pulse/GroundPulse](https://github.com/Ground-Pulse/GroundPulse), playable in about
 five seconds.
 
 **The accent colours are the product's own statuses.** Nothing is coloured
